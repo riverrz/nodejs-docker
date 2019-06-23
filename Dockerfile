@@ -5,8 +5,11 @@ FROM node:alpine
 WORKDIR /usr/app
 
 # Install dependencies
-COPY ./ ./
+COPY ./package.json ./
 RUN npm install
+
+#Copy source code
+COPY ./ ./
 
 # Setup default command
 
